@@ -1,3 +1,5 @@
+import 'package:client/core/theme/theme.dart';
+import 'package:client/features/auth/view/pages/signup_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,27 +13,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Spotify Clone',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
-        useMaterial3: true,
-      ),
-      home: const HomePage(),
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Text(
-          'Spotify Clone',
-          style: Theme.of(context).textTheme.headlineMedium,
-        ),
-      ),
+      theme: AppTheme.darkThemeMode,
+      home: const SignupPage(),
     );
   }
 }
