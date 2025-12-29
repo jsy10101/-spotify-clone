@@ -19,7 +19,7 @@ def signup_user(user: UserCreate, db: Session = Depends(get_db)):
     user_db = db.query(User).filter(User.email == user.email).first()
 
     if user_db:
-        return HTTPException(400, "User with the same email exists!")
+        raise HTTPException(400, "User with the same email exists!")
 
     hashed_password = bcrypt.hashpw(user.password.encode(), bcrypt.gensalt())
     user_db = User(
@@ -39,12 +39,12 @@ def login_user(user: UserLogin, db: Session = Depends(get_db)):
     user_db = db.query(User).filter(User.email == user.email).first()
 
     if not user_db:
-        return HTTPException(400, "User with this email does not exist!")
+        raise HTTPException(400, "User with this email does not exist!")
 
     # password matching or not
     is_match = bcrypt.checkpw(user.password.encode(), user_db.password)
 
     if not is_match:
-        return HTTPException(400, "Incorrect password!")
+        raise HTTPException(400, "Incorrect password!")
 
     return user_db
