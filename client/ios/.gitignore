@@ -19,6 +19,8 @@ Flutter/App.framework
 Flutter/Flutter.framework
 Flutter/Flutter.podspec
 Flutter/Generated.xcconfig
+Flutter/Debug.xcconfig
+Flutter/Release.xcconfig
 Flutter/ephemeral/
 Flutter/app.flx
 Flutter/app.zip
@@ -26,6 +28,12 @@ Flutter/flutter_assets/
 Flutter/flutter_export_environment.sh
 ServiceDefinitions.json
 Runner/GeneratedPluginRegistrant.*
+Runner.xcodeproj/project.pbxproj
+Runner.xcworkspace/contents.xcworkspacedata
+
+# CocoaPods
+Podfile
+Podfile.lock
 
 # Exceptions to above rules.
 !default.mode1v3
