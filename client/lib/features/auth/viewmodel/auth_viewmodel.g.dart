@@ -41,7 +41,7 @@ final class AuthViewModelProvider
   }
 }
 
-String _$authViewModelHash() => r'ca6a9d848974a1e5f7e36c749c1da6aa2ead3f7f';
+String _$authViewModelHash() => r'594dabf4a5e746dd0702eea2cfd20c820df2eb13';
 
 abstract class _$AuthViewModel extends $Notifier<AsyncValue<UserModel>?> {
   AsyncValue<UserModel>? build();
