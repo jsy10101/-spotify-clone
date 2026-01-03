@@ -93,7 +93,7 @@ class AuthViewModel extends _$AuthViewModel {
       return val.value;
     }
 
-    return null;
+    return state = null;
   }
 
   AsyncValue<UserModel> getDataSuccess(UserModel user) {
